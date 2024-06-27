@@ -26,10 +26,45 @@ Here are some ideas to get you started:
 
 
 <!--- snake -->
-<div align="center">
-  <img  src="https://github.com/1999AZZAR/1999AZZAR/blob/readme/resources/img/grid-snake.svg"
-       alt="snake" /></a>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Animación de serpiente</title>
+  <style>
+    svg {
+      background-color: #eee;
+    }
+
+    #snakeBody {
+      animation: snakeMove 2s ease-in-out infinite;
+    }
+
+    @keyframes snakeMove {
+      0% { d: M 0 100; }
+      25% { d: M 20 80; }
+      50% { d: M 40 100; }
+      75% { d: M 20 120; }
+      100% { d: M 0 100; }
+    }
+
+    #fernandoText {
+      animation: fernandoAppear 1s ease-in-out alternate infinite;
+      opacity: 0;
+    }
+
+    @keyframes fernandoAppear {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <svg width="880" height="192" viewBox="-16 -32 880 192" xmlns="http://www.w3.org/2000/svg">
+    <path id="snakeBody" fill="green" d="M 0 100" />
+    <text id="fernandoText" x="100" y="100" font-size="20" fill="black">Fernando</text>
+  </svg>
+</body>
+</html>
 
 
 <!--h2 without bottom border-->
